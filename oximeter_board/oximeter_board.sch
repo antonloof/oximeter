@@ -1,0 +1,200 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 611EB710
+P 5850 3150
+F 0 "Q1" H 6054 3196 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 6054 3105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 6050 3250 50  0001 C CNN
+F 3 "~" H 5850 3150 50  0001 C CNN
+	1    5850 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 611EC052
+P 5950 2250
+F 0 "D2" V 5989 2133 50  0000 R CNN
+F 1 "LED" V 5898 2133 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 5950 2250 50  0001 C CNN
+F 3 "~" H 5950 2250 50  0001 C CNN
+	1    5950 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 611EC33C
+P 5250 3150
+F 0 "R2" V 5054 3150 50  0000 C CNN
+F 1 "330" V 5145 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5250 3150 50  0001 C CNN
+F 3 "~" H 5250 3150 50  0001 C CNN
+	1    5250 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 611EC8C0
+P 5950 2650
+F 0 "R3" H 6009 2696 50  0000 L CNN
+F 1 "330" H 6009 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5950 2650 50  0001 C CNN
+F 3 "~" H 5950 2650 50  0001 C CNN
+	1    5950 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 611EDB7C
+P 4850 2300
+F 0 "J1" H 4930 2292 50  0000 L CNN
+F 1 "Conn_01x04" H 4930 2201 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-4_P5.00mm" H 4850 2300 50  0001 C CNN
+F 3 "~" H 4850 2300 50  0001 C CNN
+	1    4850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 611EE4DE
+P 4550 2500
+F 0 "#PWR0101" H 4550 2250 50  0001 C CNN
+F 1 "GND" H 4555 2327 50  0000 C CNN
+F 2 "" H 4550 2500 50  0001 C CNN
+F 3 "" H 4550 2500 50  0001 C CNN
+	1    4550 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 611EEA2C
+P 4550 2050
+F 0 "#PWR0102" H 4550 1900 50  0001 C CNN
+F 1 "+3V3" H 4565 2223 50  0000 C CNN
+F 2 "" H 4550 2050 50  0001 C CNN
+F 3 "" H 4550 2050 50  0001 C CNN
+	1    4550 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2200 4550 2200
+Wire Wire Line
+	4550 2200 4550 2050
+Wire Wire Line
+	4650 2400 4550 2400
+Wire Wire Line
+	4550 2400 4550 2500
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 611EF5D6
+P 5950 2000
+F 0 "#PWR0103" H 5950 1850 50  0001 C CNN
+F 1 "+3V3" H 5965 2173 50  0000 C CNN
+F 2 "" H 5950 2000 50  0001 C CNN
+F 3 "" H 5950 2000 50  0001 C CNN
+	1    5950 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 2000 5950 2100
+Wire Wire Line
+	5950 2400 5950 2550
+Wire Wire Line
+	5950 2750 5950 2950
+Wire Wire Line
+	5650 3150 5350 3150
+$Comp
+L power:GND #PWR0104
+U 1 1 611EFD04
+P 5950 3400
+F 0 "#PWR0104" H 5950 3150 50  0001 C CNN
+F 1 "GND" H 5955 3227 50  0000 C CNN
+F 2 "" H 5950 3400 50  0001 C CNN
+F 3 "" H 5950 3400 50  0001 C CNN
+	1    5950 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3400 5950 3350
+$Comp
+L Device:D_Photo D1
+U 1 1 611F12A5
+P 3200 2900
+F 0 "D1" V 3104 3057 50  0000 L CNN
+F 1 "D_Photo" V 3195 3057 50  0000 L CNN
+F 2 "good_things:sfh-2440-l" H 3150 2900 50  0001 C CNN
+F 3 "~" H 3150 2900 50  0001 C CNN
+	1    3200 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0105
+U 1 1 611F1F6F
+P 3200 2200
+F 0 "#PWR0105" H 3200 2050 50  0001 C CNN
+F 1 "+3V3" H 3215 2373 50  0000 C CNN
+F 2 "" H 3200 2200 50  0001 C CNN
+F 3 "" H 3200 2200 50  0001 C CNN
+	1    3200 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 611F221F
+P 3200 2450
+F 0 "R1" H 3259 2496 50  0000 L CNN
+F 1 "10k" H 3259 2405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3200 2450 50  0001 C CNN
+F 3 "~" H 3200 2450 50  0001 C CNN
+	1    3200 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 611F24B4
+P 3200 3150
+F 0 "#PWR0106" H 3200 2900 50  0001 C CNN
+F 1 "GND" H 3205 2977 50  0000 C CNN
+F 2 "" H 3200 3150 50  0001 C CNN
+F 3 "" H 3200 3150 50  0001 C CNN
+	1    3200 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3000 3200 3150
+Wire Wire Line
+	3200 2700 3200 2600
+Wire Wire Line
+	3200 2350 3200 2200
+Wire Wire Line
+	4650 2300 3950 2300
+Wire Wire Line
+	3950 2300 3950 2600
+Wire Wire Line
+	3950 2600 3200 2600
+Connection ~ 3200 2600
+Wire Wire Line
+	3200 2600 3200 2550
+Wire Wire Line
+	4650 2500 4650 3150
+Wire Wire Line
+	4650 3150 5150 3150
+Text Label 4100 2300 0    50   ~ 0
+photo_diode
+Text Label 4800 3150 0    50   ~ 0
+led_ctrl
+$EndSCHEMATC

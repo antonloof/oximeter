@@ -96,7 +96,7 @@ class PeakDetector:
 
 
 class HeartBeatMeasurement:
-    def __init__(self, points_avg=10):
+    def __init__(self, points_avg, prominence):
         self.timer = Timer.Chrono()
         self.timer.start()
 
@@ -108,7 +108,7 @@ class HeartBeatMeasurement:
         self.has_sample = False
         self.new_sample_val = 0
 
-        self.peak_detector = PeakDetector(self.got_peak, prominence=1000)
+        self.peak_detector = PeakDetector(self.got_peak, prominence=prominence)
 
     def got_peak(self, value, time_s):
         if self.last_peak is None:
@@ -139,12 +139,12 @@ class HeartBeatMeasurement:
 
 
 
-filter_a = [1, -1.984355370350682, 0.984414127416097]
-filter_b = [1, 0, -1]
+filter_a = [1,  -3.912006807322443, 5.739806162382575, -3.743588574243218, 0.915789220675518]
+filter_b = [0.000926291813580, 0, -0.001852583627160, 0, 0.000926291813580]
 
-heart_beater = HeartBeatMeasurement(points_avg=5)
-filter = IIRFilter(filter_a, filter_b, heart_beater.new_sample)
-alarm = Timer.Alarm(handler=filter.sample, ms=1, periodic=True)
+heart_beater = HeartBeatMeasurement(points_avg=2, prominence=30)
+fil = IIRFilter(filter_a, filter_b, heart_beater.new_sample)
+alarm = Timer.Alarm(handler=fil.sample, ms=1, periodic=True)
 
 while 1:
     heart_beater.update()

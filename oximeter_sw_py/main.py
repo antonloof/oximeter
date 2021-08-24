@@ -139,10 +139,10 @@ class HeartBeatMeasurement:
 
 
 
-filter_a = [1, -1.939615577809588, 0.939653877266580]
-filter_b = [0.030173061366710, 0, -0.030173061366710]
+filter_a = [1, -1.984355370350682, 0.984414127416097]
+filter_b = [1, 0, -1]
 
-heart_beater = HeartBeatMeasurement(points_avg=2, prominence=30)
+heart_beater = HeartBeatMeasurement(points_avg=2, prominence=1000)
 fil = IIRFilter(filter_a, filter_b, heart_beater.new_sample)
 alarm = Timer.Alarm(handler=fil.sample, ms=1, periodic=True)
 

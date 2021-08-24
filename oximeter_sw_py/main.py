@@ -139,8 +139,8 @@ class HeartBeatMeasurement:
 
 
 
-filter_a = [1,  -3.912006807322443, 5.739806162382575, -3.743588574243218, 0.915789220675518]
-filter_b = [0.000926291813580, 0, -0.001852583627160, 0, 0.000926291813580]
+filter_a = [1, -1.939615577809588, 0.939653877266580]
+filter_b = [0.030173061366710, 0, -0.030173061366710]
 
 heart_beater = HeartBeatMeasurement(points_avg=2, prominence=30)
 fil = IIRFilter(filter_a, filter_b, heart_beater.new_sample)

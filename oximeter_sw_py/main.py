@@ -142,9 +142,14 @@ class HeartBeatMeasurement:
 filter_a = [1, -1.984355370350682, 0.984414127416097]
 filter_b = [1, 0, -1]
 
-heart_beater = HeartBeatMeasurement(points_avg=2, prominence=1000)
+led_pin = Pin("P23", mode=Pin.OUT)
+led_pin.value(0)
+print("Starting...")
+
+heart_beater = HeartBeatMeasurement(points_avg=2, prominence=300)
 fil = IIRFilter(filter_a, filter_b, heart_beater.new_sample)
 alarm = Timer.Alarm(handler=fil.sample, ms=1, periodic=True)
 
+print("Started!")
 while 1:
     heart_beater.update()
